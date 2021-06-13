@@ -37,13 +37,38 @@ int main()
 }
 
 void runGame()
-{
-    //TODO loops a while loop while the game is being played. Prints a new board everytime a new move is made.
+{   /*
+        
+        loop until isGameWon() returns 1 or 2 (for player 1 or 2). isGamewWon just returns m_GameIsWon (1,2 if won and 0 if not won) m_GameisWon checks after every move
+        if game is won or not and changes the member variable m_GameIsWon. This should be in the gameLogic class.
 
-    Board.print_board();
-    //Board.update_board(337, 0);
-    Game.makeMove(1, 0, Board);
-    Board.print_board();
+        
+    */
+    int move; // a move between 1 and 7.
+    int moveIndex; // The moves corresponding index on the board.
+    //while (!Game.isGameWon())
+    //{
+    //    Board.print_board();                            //print the game Board
+    //    move = Game.getValidMove(Board);                //Get a VALID move from current player
+    //    moveIndex = Game.getMoveIndex(move, Board);     //Get the moveIndex of the previously received VALID move.
+    //    Board.update_board(moveIndex, Game.m_side);     //Update the Board
+    //    Game.changeSide();                              //Changes sides after a player made a move
+    //}
+
+
+    //Test win condition
+    //enter lots of different moves and then test if it produces a win or a draw. or nothing.
+    //Board.print_board();                            //print the game Board
+    //moveIndex = Game.getMoveIndex(5, Board);     //Get the moveIndex of the previously received VALID move.
+    //Board.update_board(moveIndex, 0);     //Update the Board
+    //moveIndex = Game.getMoveIndex(5, Board);     //Get the moveIndex of the previously received VALID move.
+    //Board.update_board(moveIndex, 0);     //Update the Board
+    //moveIndex = Game.getMoveIndex(5, Board);     //Get the moveIndex of the previously received VALID move.
+    //Board.update_board(moveIndex, 0);     //Update the Board
+    moveIndex = Game.getMoveIndex(5, Board);     //Get the moveIndex of the previously received VALID move.
+    Board.update_board(moveIndex, 0);     //Update the Board
+    Board.print_board();                            //print the game Board
+    Game.check4InARow(moveIndex,Board);
 
 
 

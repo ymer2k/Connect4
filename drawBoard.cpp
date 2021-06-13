@@ -13,7 +13,7 @@ drawBoard::drawBoard() // Default constructor (runs everytime a new object is ma
 
 void drawBoard::update_board(int newMoveIndex, int side)
 { // takes in the exact index and which side made the move and updates the board with the new move. The exact index is handled in the gameLogic class
-	m_board[newMoveIndex] = pieces[side];
+	m_board[newMoveIndex] = PIECES[side];
 }
 
 
@@ -21,7 +21,7 @@ void drawBoard::print_board()
 {	// Loop through the string and put new lines at the right places.
 	for (struct { int count; int row_count; } v = { 0, 1 }; v.count < (int)m_board.size(); v.count++)
 	{
-		if (m_board[v.count] == '2') // I use 2s to indicate empty positions so when printing, just print an empty space instead of the 2.
+		if (m_board[v.count] == 'F') // I use the letter F to indicate empty positions so when printing, just print an empty space instead of the F.
 		{
 			std::cout << " ";
 
@@ -44,18 +44,19 @@ void drawBoard::initialise_board()
 
 	m_board = 
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
+		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
+		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
+		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
+		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
+		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
-		"| 2 | 2 | 2 | 2 | 2 | 2 | 2 |"
-		"+ - + - + - + - + - + - + - +";
+		"| F | F | F | F | F | F | F |"
+		"+ - + - + - + - + - + - + - +"
+		"  1   2   3   4   5   6   7  ";
 
 
 	/*
