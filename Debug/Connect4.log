@@ -1,3 +1,2 @@
 ﻿  main.cpp
-C:\Users\Jonas\source\repos\Connect4\Connect4\main.cpp(47,9): warning C4101: 'move': unreferenced local variable
   Connect4.vcxproj -> C:\Users\Jonas\source\repos\Connect4\Debug\Connect4.exe

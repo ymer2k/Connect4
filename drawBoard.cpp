@@ -6,9 +6,6 @@
 drawBoard::drawBoard() // Default constructor (runs everytime a new object is made)
 {
 	initialise_board();
-	//print_board();
-
-
 }
 
 void drawBoard::update_board(int newMoveIndex, int side)
@@ -34,14 +31,12 @@ void drawBoard::print_board()
 			v.row_count++;
 		}
 	}
-
 	std::cout << std::endl;
 	std::cout << std::endl;
 }
 
 void drawBoard::initialise_board()
 {
-
 	m_board = 
 		"+ - + - + - + - + - + - + - +"
 		"| F | F | F | F | F | F | F |"
@@ -57,41 +52,5 @@ void drawBoard::initialise_board()
 		"| F | F | F | F | F | F | F |"
 		"+ - + - + - + - + - + - + - +"
 		"  1   2   3   4   5   6   7  ";
-
-
-	/*
-	* 	m_board = 
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +"
-		"|   |   |   |   |   |   |   |"
-		"+ - + - + - + - + - + - + - +";
-	*/
-
-	
-		
-
-
-	//int index = 0;
-	////TODO add the vertical lines and the EMPTY spaces. Make the chars '+' '-' '|' into constants.
-	//for (index = 0; index < BOARD_ARRAY_SIZE; index++)
-	//{
-	//	if (index % 2 == 0) // if index is an even number
-	//	{
-	//		m_border.push_back('+');
-	//	}
-	//	else // else index is odd
-	//	{
-	//		m_border.push_back('-');
-	//	}
-	//}
 }
 
